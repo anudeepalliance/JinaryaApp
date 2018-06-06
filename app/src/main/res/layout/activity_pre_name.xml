@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_gradient"
+    tools:context="com.example.android.jinarya.PreNameActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/name_emoji"
+        android:padding="@dimen/secondary_padding">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/SubHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="@dimen/no_padding"
+            android:text="@string/choose_the_test_type"
+            android:textColor="@color/whiteColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/pre_name_animation_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:elevation="@dimen/primary_margin"
+            android:padding="@dimen/space_5dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_emoji">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/friendship_image_view"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="@+id/friendship_type_button"
+                app:layout_constraintStart_toStartOf="@+id/friendship_type_button"
+                app:srcCompat="@drawable/ic_friendship" />
+
+            <ImageView
+                android:id="@+id/relationship_image_view"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/friendship_image_view"
+                app:layout_constraintEnd_toEndOf="@+id/relationship_type_button"
+                app:layout_constraintStart_toStartOf="@+id/relationship_type_button"
+                app:layout_constraintTop_toTopOf="@+id/friendship_image_view"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_wedding_couple" />
+
+
+            <Button
+                android:id="@+id/friendship_type_button"
+                style="@style/Button"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/primary_margin"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/green_ripple_rectangle_button"
+                android:gravity="center"
+                android:text="@string/friendship_test_type"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="@dimen/content_text_size"
+                android:textColor="@color/whiteColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/friendship_image_view" />
+
+            <Button
+                android:id="@+id/relationship_type_button"
+                style="@style/Button"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/primary_margin"
+                android:background="@drawable/green_ripple_rectangle_button"
+                android:gravity="center"
+                android:text="@string/relationship_test_type"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="@dimen/content_text_size"
+                android:textColor="@color/whiteColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/friendship_type_button" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+

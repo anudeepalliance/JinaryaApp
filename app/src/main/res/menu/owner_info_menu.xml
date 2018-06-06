@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pre_name_reports_menu"
+        android:orderInCategory="200"
+        android:title="@string/report_heading" />
+
+    <item
+        android:id="@+id/pre_name_welcome_menu"
+        android:orderInCategory="200"
+        android:title="@string/welcome_app" />
+
+    <item
+        android:id="@+id/pre_name_legal"
+        android:orderInCategory="200"
+        android:title="@string/legal" />
+
+</menu>

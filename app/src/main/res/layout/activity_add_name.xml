@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/owner_activity_layout"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.android.jinarya.OwnerInfoEditActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/add_name_dummy_View" />
+
+    <TextView
+        android:id="@+id/add_name_info_title_text"
+        style="@style/SubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/add_name_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <View
+        android:id="@+id/add_name_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:background="@color/grayColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_info_title_text"/>
+
+
+    <EditText
+        android:id="@+id/add_name_name_edit"
+        style="@style/Label"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/primary_margin"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:hint="Enter Your Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_title_line" />
+
+    <ImageView
+        android:id="@+id/add_name_contact_picker"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/start_button_ripple_effect"
+        android:padding="@dimen/space_5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_name_name_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_name_name_edit"
+        app:layout_constraintTop_toTopOf="@+id/add_name_name_edit"
+        app:srcCompat="@drawable/ic_contacts_white_48px" />
+
+
+    <View
+        android:id="@+id/add_name_name_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:background="@color/grayColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_name_edit" />
+
+
+    <Spinner
+        android:id="@+id/add_name_age_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:entries="@array/age_options"
+        android:padding="@dimen/no_padding"
+        app:layout_constraintStart_toStartOf="@+id/add_name_name_edit"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_name_line" />
+
+    <View
+        android:id="@+id/owner_age_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:background="@color/grayColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_age_spinner" />
+
+
+    <Spinner
+        android:id="@+id/add_name_gender_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:entries="@array/gender_options"
+        android:padding="@dimen/no_padding"
+        app:layout_constraintStart_toStartOf="@+id/add_name_age_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/owner_age_line" />
+
+    <View
+        android:id="@+id/owner_gender_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/primary_margin"
+        android:background="@color/grayColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_gender_spinner" />
+
+
+    <Button
+        android:id="@+id/add_name_info_save_button"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/red_ripple_rectangle_button"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner_gender_line" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

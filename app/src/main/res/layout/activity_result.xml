@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            style="@style/SubHeading"
+            android:id="@+id/result_owner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="OwnerName"
+            android:padding="@dimen/no_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result_owner_age"
+            style="@style/Content"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Aged 25 - 30yrs"
+            android:textColor="@color/secondaryFontColor"
+            app:layout_constraintStart_toStartOf="@+id/result_owner_name"
+            app:layout_constraintTop_toBottomOf="@+id/result_owner_name" />
+
+        <TextView
+            android:id="@+id/result_guest_name"
+            style="@style/SubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/no_padding"
+            android:text="GuestName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result_guest_age"
+            style="@style/Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Aged 18 - 24yrs"
+            android:textColor="@color/secondaryFontColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/result_guest_name"
+            app:layout_constraintTop_toBottomOf="@+id/result_guest_name" />
+
+
+        <TextView
+            android:id="@+id/result_date"
+            style="@style/Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/no_padding"
+            android:text="Dec 22, 2017"
+            android:textColor="@color/secondaryFontColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/result_guest_age"
+            app:layout_constraintTop_toTopOf="@+id/result_test_type" />
+
+        <TextView
+            android:id="@+id/result_test_type"
+            style="@style/Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Test Type"
+            android:textColor="@color/secondaryFontColor"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/result_owner_age"
+            app:layout_constraintTop_toBottomOf="@+id/result_guest_age" />
+
+        <View
+            android:id="@+id/result_name_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/secondary_margin"
+            android:background="@color/grayColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_date" />
+
+
+
+
+        <TextView
+            android:id="@+id/result_compatibility_score_heading_label"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="5dp"
+            android:text="Compatibility Score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_name_line" />
+
+        <ImageView
+            android:id="@+id/result_score_circle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_compatibility_score_heading_label"
+            app:srcCompat="@drawable/blue_rectangle" />
+
+        <TextView
+            android:id="@+id/result_score_percentage"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:padding="@dimen/no_padding"
+            android:text="50"
+            android:textColor="@color/whiteColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/result_score_circle"
+            app:layout_constraintEnd_toEndOf="@+id/result_score_circle"
+            app:layout_constraintStart_toStartOf="@+id/result_score_circle"
+            app:layout_constraintTop_toTopOf="@+id/result_score_circle" />
+
+        <TextView
+            android:id="@+id/result_compatibility_score_summary"
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Compatibility Score Feedback"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_score_circle" />
+
+        <View
+            android:id="@+id/result_insights_for_owner_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green_color"
+            app:layout_constraintTop_toBottomOf="@+id/result_compatibility_score_summary" />
+
+        <TextView
+            android:id="@+id/result_insights_for_owner_heading"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Insights for partner1Name "
+            android:textColor="@color/whiteColor"
+            app:layout_constraintBottom_toBottomOf="@+id/result_insights_for_owner_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_insights_for_owner_background" />
+
+        <TextView
+            android:id="@+id/result_insights_for_owner_text"
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Insights about Guest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_insights_for_owner_background" />
+
+
+        <View
+            android:id="@+id/result_insights_for_guest_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/blue_color"
+            app:layout_constraintTop_toBottomOf="@+id/result_insights_for_owner_text"/>
+
+        <TextView
+            android:id="@+id/result_insights_for_guest_heading"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Insights for partner2Name "
+            android:textColor="@color/whiteColor"
+            app:layout_constraintBottom_toBottomOf="@+id/result_insights_for_guest_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_insights_for_guest_background" />
+
+        <TextView
+            android:id="@+id/result_insights_for_guest_text"
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Insights about Owner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_insights_for_guest_background" />
+
+        <View
+            android:id="@+id/result_advice_for_owner_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green_color"
+            app:layout_constraintTop_toBottomOf="@+id/result_insights_for_guest_text"/>
+
+
+        <TextView
+            android:id="@+id/result_advice_for_owner_heading"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:textColor="@color/whiteColor"
+            android:text="Advice for Owner"
+            app:layout_constraintBottom_toBottomOf="@+id/result_advice_for_owner_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_advice_for_owner_background" />
+
+        <TextView
+            android:id="@+id/result_advice_for_owner_text"
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Owner Advice details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_advice_for_owner_background" />
+
+        <View
+            android:id="@+id/result_advice_for_guest_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/blue_color"
+            app:layout_constraintTop_toBottomOf="@+id/result_advice_for_owner_text"/>
+
+        <TextView
+            android:id="@+id/result_advice_for_guest_heading"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:textColor="@color/whiteColor"
+            android:text="Advice for Guest"
+            app:layout_constraintBottom_toBottomOf="@+id/result_advice_for_guest_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_advice_for_guest_background" />
+
+        <TextView
+            android:id="@+id/result_advice_for_guest_text"
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="Guest Advice details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_advice_for_guest_background" />
+
+
+
+        <ImageView
+            android:id="@+id/result_share_button"
+            style="@style/Button"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/secondary_margin"
+            android:background="@drawable/green_ripple_rectangle_button"
+            android:padding="@dimen/high_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_advice_for_guest_text"
+            app:srcCompat="@drawable/ic_sharing_button" />
+
+        <View
+            android:id="@+id/result_advice_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/secondary_margin"
+            android:background="@color/grayColor"
+            android:padding="@dimen/no_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_share_text" />
+
+        <ImageView
+            android:id="@+id/result_restart_button"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/red_ripple_round_button"
+            app:srcCompat="@drawable/restart"
+            android:padding="@dimen/high_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_advice_line" />
+
+        <ImageView
+            android:id="@+id/result_feedback_button"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/blue_ripple_rectangle_button"
+            android:padding="@dimen/high_padding"
+            android:src="@drawable/feedback"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_restart_button" />
+
+        <ImageView
+            android:id="@+id/result_reports_button"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/magenta_ripple_round_button"
+            android:padding="@dimen/high_padding"
+            android:src="@drawable/ic_all_reports"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_feedback_button" />
+
+        <TextView
+            android:id="@+id/please_wait_text"
+            style="@style/Heading"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:padding="@dimen/primary_padding"
+            android:visibility="gone"
+            android:text="@string/wait_for_evaluation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="252dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/primary_margin"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/please_wait_text" />
+
+        <TextView
+            android:id="@+id/result_restart_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/new_test"
+            style="@style/smallContent"
+            app:layout_constraintEnd_toEndOf="@+id/result_restart_button"
+            app:layout_constraintStart_toStartOf="@+id/result_restart_button"
+            app:layout_constraintTop_toBottomOf="@+id/result_restart_button" />
+
+        <TextView
+            android:id="@+id/result_share_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tell_a_friend"
+            style="@style/smallContent"
+            app:layout_constraintEnd_toEndOf="@+id/result_share_button"
+            app:layout_constraintStart_toStartOf="@+id/result_share_button"
+            app:layout_constraintTop_toBottomOf="@+id/result_share_button" />
+
+        <TextView
+            android:id="@+id/result_feedback_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/feedback"
+            style="@style/smallContent"
+            app:layout_constraintEnd_toEndOf="@+id/result_feedback_button"
+            app:layout_constraintStart_toStartOf="@+id/result_feedback_button"
+            app:layout_constraintTop_toBottomOf="@+id/result_feedback_button" />
+
+        <TextView
+            android:id="@+id/result_all_reports_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/all_reports"
+            android:paddingBottom="@dimen/secondary_padding"
+            style="@style/smallContent"
+            app:layout_constraintEnd_toEndOf="@+id/result_reports_button"
+            app:layout_constraintStart_toStartOf="@+id/result_reports_button"
+            app:layout_constraintTop_toBottomOf="@+id/result_reports_button" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

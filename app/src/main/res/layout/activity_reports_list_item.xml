@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/report_list_item"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/report_id"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/position_number"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_5dp">
+
+        <ImageView
+            android:id="@+id/report_item_score_circle"
+            style="@style/SubHeading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:padding="@dimen/no_padding"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/blue_rectangle"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/report_item_score_percentage"
+            style="@style/Heading"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/no_padding"
+            android:text="67"
+            android:textColor="@color/whiteColor"
+            app:layout_constraintBottom_toBottomOf="@+id/report_item_score_circle"
+            app:layout_constraintEnd_toEndOf="@+id/report_item_score_circle"
+            app:layout_constraintStart_toStartOf="@+id/report_item_score_circle"
+            app:layout_constraintTop_toTopOf="@+id/report_item_score_circle" />
+
+        <TextView
+            android:id="@+id/report_item_boy_name"
+            style="@style/SubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.4"
+            android:padding="@dimen/no_padding"
+            android:text="Ramesh"
+            app:layout_constraintStart_toEndOf="@+id/report_item_score_circle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/report_item_girl_name"
+            style="@style/SubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="0.4"
+            android:padding="@dimen/no_padding"
+            android:text="Anita"
+            app:layout_constraintEnd_toStartOf="@+id/report_item_time_stamp"
+            app:layout_constraintStart_toEndOf="@+id/report_item_boy_name"
+            app:layout_constraintTop_toTopOf="@+id/report_item_boy_name" />
+
+
+        <TextView
+            android:id="@+id/report_item_time_stamp"
+            style="@style/smallContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/primary_margin"
+            android:layout_weight="0.2"
+            android:padding="@dimen/no_padding"
+            android:text="22 Dec"
+            android:textColor="@color/dateFontColor"
+            android:textSize="@dimen/small_content_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/report_item_girl_name" />
+
+
+        <TextView
+            android:id="@+id/report_item_result_summary"
+            style="@style/SubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/secondary_margin"
+            android:maxLines="3"
+            android:padding="@dimen/no_padding"
+            android:text="Relationship Summary  Summary "
+            android:textColor="@color/secondaryFontColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/report_item_boy_name"
+            app:layout_constraintTop_toBottomOf="@+id/report_item_time_stamp" />
+
+        <TextView
+            android:id="@+id/report_item_test_type"
+            style="@style/SubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/no_padding"
+            android:text="Relationship Test"
+            android:textColor="@color/darkGrayFontColor"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/report_item_result_summary"
+            app:layout_constraintTop_toBottomOf="@+id/report_item_result_summary" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayColor" />
+
+</LinearLayout>

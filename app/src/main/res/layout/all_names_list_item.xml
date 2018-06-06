@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/all_names_id"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_5dp">
+
+        <ImageView
+            android:id="@+id/all_names_user_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_female_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/all_names_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/primary_margin"
+            style="@style/SubHeading"
+            android:text="Anita Rani"
+            android:textColor="@color/primaryFontColor"
+            app:layout_constraintBottom_toBottomOf="@+id/all_names_user_icon"
+            app:layout_constraintStart_toEndOf="@+id/all_names_user_icon"
+            app:layout_constraintTop_toTopOf="@+id/all_names_user_icon" />
+
+        <TextView
+            android:id="@+id/all_names_age"
+            style="@style/smallContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginTop="8dp"
+            android:text="Age : 25 - 34 years"
+            app:layout_constraintBottom_toBottomOf="@+id/all_names_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/all_names_user_icon"
+            app:layout_constraintVertical_bias="0.533" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/secondary_margin"
+        android:layout_marginEnd="@dimen/secondary_margin"
+        android:background="@color/grayColor" />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.jinarya">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.android.jinarya.WelcomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.jinarya.PreNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.RelationshipNameActivity"
+            android:parentActivityName=".PreNameActivity" />
+        <activity
+            android:name="com.example.android.jinarya.PreTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.QuestionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.ResultActivity"
+            android:parentActivityName=".PreNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.ReportActivity"
+            android:parentActivityName=".ReportsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.ReportsListActivity"
+            android:parentActivityName=".PreNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.FriendshipNameActivity"
+            android:parentActivityName=".PreNameActivity" />
+        <activity
+            android:name="com.example.android.jinarya.OwnerInfoEditActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".OwnerInfoViewActivity"/>
+        <activity
+            android:name="com.example.android.jinarya.Database.NameDb.AllNames.AllNamesListActivity"
+            android:parentActivityName=".FriendshipNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.android.jinarya.Database.NameDb.OwnerNames.OwnerNamesListActivity"
+            android:parentActivityName=".RelationshipNameActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.example.android.jinarya.AddNameActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.example.android.jinarya.OwnerInfoViewActivity"
+            android:parentActivityName=".PreNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.example.android.jinarya.Database.NameDb.GuestNames.GuestNamesListActivity"
+            android:parentActivityName=".RelationshipNameActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.example.android.jinarya.BackGroundJobs.Notifications.NotificationReminderFirebaseJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
